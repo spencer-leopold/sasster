@@ -1,0 +1,41 @@
+{
+  "name": "sasster",
+  "version": "1.0.0",
+  "description": "Utility to compile sass using libsass, and watch for changes - only recompiling files that need to be.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.org:spencer-leopold/sasster.git"
+  },
+  "keywords": [
+    "libsass",
+    "sass",
+    "scss",
+    "watch",
+    "bourbon",
+    "neat"
+  ],
+  "author": {
+    "name": "Spencer Leopold",
+    "email": "spencer.leopold@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.9.32",
+    "chalk": "^0.5.1",
+    "chokidar": "^1.0.1",
+    "glob": "^4.3.5",
+    "import-regex": "^1.1.0",
+    "node-bourbon": "^1.2.3",
+    "node-neat": "^1.4.2",
+    "node-sass": "^2.0.1",
+    "object-assign": "^2.0.0",
+    "yargs": "^2.1.1"
+  },
+  "bin": {
+    "sasster": "./bin.js"
+  }
+}
