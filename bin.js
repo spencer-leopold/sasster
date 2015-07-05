@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var Sasster = require('./lib/sasster');
+var Sasster = require('./');
 var argv = require('yargs')
     .usage('Usage: sasster <source> <dest> --cwd [str] --imagePath [str] --outputStyle [str] --sourceMap [bool] -c [str] -w [bool]')
     .describe('cwd', 'Current Working Directory, [required]')
@@ -16,3 +16,4 @@ var argv = require('yargs')
     .argv;
 
 var e = Sasster(null, argv);
+e.start();

@@ -50,5 +50,9 @@ module.exports = function init(o, args) {
     }
   }
 
-  return new Sasster(options, args);
+  if (args && !!args.watch) {
+    options.watch = args.watch;
+  }
+
+  return new Sasster(options);
 }
