@@ -8,7 +8,7 @@ This module compiles SCSS/SASS to CSS using libsass. The main difference between
 
 ## Setup
 
-Configuration can either be added directly into your package.json, or you can create a sasster.config.js file in order to use some of the additional features.
+Configuration can either be added directly into your package.json, or you can create a sasster.config.js file in order to use custom includePaths (i.e. Bourbon, Neat).
 
 # Install
 
@@ -64,7 +64,7 @@ _using standalone_
   "scripts": {
     "clean": "rimraf dist/css/*",
     "watch:styles": "sasster -w",
-    "build:styles": "npm run clean && sasster --sourceMaps=false --outputStyle=compressed",
+    "build:styles": "npm run clean && sasster --sourceMap=false --outputStyle=compressed",
     "dev": "npm run watch:styles",
     "prod": "npm run build:styles"
   }
