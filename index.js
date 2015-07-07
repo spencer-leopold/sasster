@@ -52,8 +52,21 @@ module.exports = function init(o, args) {
     }
   }
 
-  if (args && !!args.watch) {
-    options.watch = args.watch;
+  // Override any options that are set in CLI
+  if (args) {
+    for (var prop in args) {
+      if (args.hasOwnProperty(prop) && !!args[prop]) {
+        if (args[prop] === 'true') {
+          options[prop] = true;
+        }
+        else if (args[prop] === 'false') {
+          options[prop] = false;
+        }
+        else {
+          options[prop] = args[prop];
+        }
+      }
+    }
   }
 
   return new Sasster(options);
