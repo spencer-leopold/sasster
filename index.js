@@ -1,3 +1,5 @@
+'use strict';
+
 var path = require('path');
 var fs = require('fs');
 var Sasster = require('./lib/sasster');
@@ -29,10 +31,10 @@ module.exports = function init(o, args) {
   }
   else {
     try {
-      var package = require(path.resolve('package.json'));
+      var mainPackage = require(path.resolve('package.json'));
 
-      if (!!package.sasster) {
-        options = package.sasster;
+      if (!!mainPackage.sasster) {
+        options = mainPackage.sasster;
       }
       else {
         var config = path.resolve('sasster.config.js');
@@ -55,4 +57,4 @@ module.exports = function init(o, args) {
   }
 
   return new Sasster(options);
-}
+};
