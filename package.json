@@ -4,7 +4,10 @@
   "description": "Utility to compile sass using libsass, and watch for changes - only recompiling files that need to be.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "jshint": "jshint lib/*.js index.js --verbose",
+    "test": "mocha -R spec ./test --recursive",
+    "coverage": "istanbul cover _mocha -- -R spec ./test --recursive",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
