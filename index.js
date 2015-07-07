@@ -15,7 +15,7 @@ module.exports = function init(o, args) {
     options = o;
   }
   else if (args && (!!args.config || (!!args._ && args._.length))) {
-    if (args._.length) {
+    if (args._ && args._.length) {
       options = args;
       options.src = args._[0];
       options.dest = args._[1];
