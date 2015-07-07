@@ -6,7 +6,6 @@ node_js:
   - "iojs"
   - "iojs-v2.0.0" 
   - "iojs-v2.1.0" 
-  - "iojs-v2.2.0" 
 notifications:
   email: false
 after_success:
