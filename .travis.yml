@@ -7,7 +7,7 @@ node_js:
   - "iojs-v2.0.0" 
   - "iojs-v2.1.0" 
 notifications:
-  email: false
+  email: true
 after_success:
   - npm run coveralls
 branches:
