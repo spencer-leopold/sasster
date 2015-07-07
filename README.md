@@ -45,7 +45,7 @@ Options:
 _using standalone_ 
 
 ```
-  $ sasster -w
+  $ sasster **/*.scss dist/css --cwd=src/scss --imagePath=img --sourceMap=true --outputStyle=compressed -w
 ```
 
 # Configuration using package.json
