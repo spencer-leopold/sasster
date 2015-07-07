@@ -20,6 +20,15 @@ describe('lib/mundler', function() {
     outputStyle: "nested"
   };
 
+  var testConfigWithWatch = {
+    cwd: 'test/',
+    src: 'fixtures/**/*.scss',
+    dest: 'test/output',
+    imagePath: "img",
+    outputStyle: "nested",
+    watch: true
+  };
+
   var testConfigNoCwd = {
     src: 'fixtures/**/*.scss',
     dest: 'test/output',
@@ -89,6 +98,27 @@ describe('lib/mundler', function() {
     });
 
     describe('#start()', function() {
+      it('should compile if no watch open, or watch is set to false', function(done) {
+        var spy = sinon.spy(s, 'compileSass');
+        s.start().then(function() {
+          spy.should.have.been.calledTwice; // once for test_main.scss and once for fail_to_compile.scss
+          done();
+        }).catch(done);
+      });
+
+      it('should only build the import map and call watch if the watch option is used', function(done) {
+        var sass = Sasster(testConfigWithWatch);
+        var compileSpy = sinon.spy(sass, 'compileSass');
+        var importMapSpy = sinon.spy(sass, 'buildImportMap');
+        var watchSpy = sinon.spy(sass, 'watch');
+
+        sass.start().then(function() {
+          compileSpy.should.not.have.been.called;
+          watchSpy.should.have.been.calledOnce;
+          importMapSpy.should.have.been.calledOnce;
+          done();
+        }).catch(done);
+      });
     });
 
     describe('#compileSass()', function() {
