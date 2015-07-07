@@ -35,6 +35,16 @@
     "object-assign": "^3.0.0",
     "yargs": "^3.15.0"
   },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.15",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.3",
+    "sinon-chai": "^2.8.0"
+  },
   "bin": {
     "sasster": "./bin.js"
   }
