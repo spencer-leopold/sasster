@@ -15,5 +15,6 @@ var argv = require('yargs')
     .alias('h', 'help')
     .argv;
 
+argv.writeToFile = true;
 var e = Sasster(null, argv);
 e.start();
