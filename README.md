@@ -58,7 +58,10 @@ _using standalone_
     "dest": "dist/css"
     "imagePath": "img",
     "outputStyle": "nested",
-    "sourceMap": true
+    "sourceMap": true,
+    "chokidar": {
+      "usePolling": true
+    }
   }
 ...
   "scripts": {
@@ -82,7 +85,7 @@ _using the above package.json_
 _(in your project's root)_
 
 ```
-var bourbon = require('node-bourbon');
+var neat = require('node-neat');
 
 module.exports = {
   cwd: 'src/scss'
@@ -91,6 +94,9 @@ module.exports = {
   imagePath: 'img',
   outputStyle: 'nested',
   sourceMap: true,
-  includePaths: bourbon.includePaths
+  includePaths: neat.includePaths,
+  chokidar: {
+    usePolling: true
+  }
 }
 ```
