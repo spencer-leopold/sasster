@@ -1,6 +1,6 @@
 {
   "name": "sasster",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Utility to compile sass using libsass, and watch for changes - only recompiling files that need to be.",
   "main": "index.js",
   "scripts": {
