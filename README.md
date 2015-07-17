@@ -4,7 +4,7 @@
 
 # Sasster
 
-This module compiles SCSS/SASS to CSS using libsass. The main difference between it and others is that there is a watch option that will only re-compile files that need to be, rather than re-compiling everything after every change.
+Compiles SCSS/SASS to CSS using libsass. The main difference between it and others is that there is a watch option that will only re-compile files that need to be, rather than re-compiling everything after every change.
 
 ## Setup
 
