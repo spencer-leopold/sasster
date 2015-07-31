@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.org:spencer-leopold/sasster.git"
+    "url": "git@github.com:spencer-leopold/sasster.git"
   },
   "keywords": [
     "libsass",
