@@ -48,6 +48,6 @@
     "sinon-chai": "^2.8.0"
   },
   "bin": {
-    "sasster": "./bin.js"
+    "sasster": "bin.js"
   }
 }
